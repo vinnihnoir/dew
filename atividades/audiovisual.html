@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiovisual</title>
+</head>
+<body>
+    <h1 style="text-align: center">Inserir Vídeo e Som em Páginas HTML</h1>
+        <p style="text-align: center">Muitos desenvolvedores sabem que uma das principais inovações da nova especificação é o
+            surgimento de tags especiais para incorporar arquivos de áudio e vídeo na página web.
+            Elementos de vídeo e áudio permitem adicionar o arquivo de mídia desejado ao seu blog
+            sem adicionar plugins especiais e sem problemas.</p>
+
+            <h2 style="text-align: center">VÍDEO</h2>
+            <h3 style="text-align: center"><a href="https://maujor.com/tutorial/inserindo-videos-com-uso-da-html5.php">
+                Fonte: https://maujor.com/tutorial/inserindo-videos-com-uso-da-html5.php</a></h3>
+        <p>
+            Em geral, para incorporar vídeo no site usando tags do html5, uma linha de código é suficiente:
+        </p>
+        <img src="../img/Capturar1.PNG">
+        <p>
+            Mas, neste caso, podem surgir problemas.
+            O fato é que nem todos os navegadores suportam absolutamente todos os formatos.
+            Talvez em alguns de navegadores seu vídeo não seja reproduzido.
+            Para evitar tais problemas, é necessário salvar o vídeo em vários formatos e
+            adicionar algumas linhas de código. Os formatos mais populares são mp4, webm, ogg.
+        </p>
+        <img src="../img/Capturar2.PNG">
+        <p>
+            Assim, o navegador lerá o código e escolherá o formato que ele pode reproduzir. Mas isso não é tudo. Para economizar o tempo que o navegador gasta procurando a linha direita do código, bem como o tempo para tentar iniciar o vídeo, é necessário adicionar o atributo type, que contém o formato de vídeo. O fato é que o navegador primeiro verifica esse atributo.
+
+<ul><li>Atributo poster - especifica a imagem que será exibida antes do início da reprodução. Mais precisamente, antes da definição do formato que o navegador pode reproduzir.</li></ul>
+
+Os navegadores mais antigos não suportam a HTML5. Portanto, você precisa inserir atributos adicionais para que o navegador tente reproduzir o vídeo usando o flash player.
+        </p>
+        <img src="../img/Capturar3.PNG">
+        <p>
+            Como você pode ver, o atributo controls foi adicionado ao código para que os elementos de controle, como rebobinar e pausar, apareçam. E também a tag <object>, que diz ao navegador o que fazer se nenhum dos formatos não puder ser reproduzido. No nosso caso, o navegador tenta abrir o vídeo no flash player. Em caso de falha, dê uma mensagem de que o formato não é suportado.
+
+                Existem atributos adicionais que podem ser especificados para a tag <"video">. Aqui estão os principais:</p>
+                <ul>
+                <li><h3>Autoplay</h3></li>
+                <p>Com este atributo, o vídeo começa a ser reproduzido automaticamente após a página ser carregada. Este truque é muitas vezes presente nas páginas de venda para chamar a atenção de uma pessoa. Agora o Google Chrome proíbe a reprodução automática de vídeos.</p>
+                <li><h3>Controls</h3></li>
+                <p>Um parâmetro muito importante que adiciona controles de vídeo. Na verdade, este atributo é usado quase sempre, porque você precisa dar à pessoa a oportunidade de colocar filme em pausa ou rebobinar.
+                </p>
+                <li><h3>Widht e Heigt</h3></li>
+                <p>São atributos obrigatórios para redimensionar a imagem.</p>
+                <li><h3>Preload</h3></li>
+                <p>Quando você adiciona esse atributo, o vídeo começa a carregar junto com o carregamento da página. Isso é muito conveniente, porque o usuário não precisa esperar até que o conteúdo seja totalmente carregado. Embora muitos usuários agora tenham uma conexão rápida à Internet e não há problemas com o carregamento de páginas. Além disso, é importante lembrar sobre usuários que não têm tráfego ilimitado e o carregamento automático sem permissão não será agradável para eles.</p>
+                <li><h3>Loop</h3></li>
+                <p>Esta opção define a repetição automática do vídeo após a conclusão da reprodução.</p>
+            </ul>
+            <h2>Como Inserir um Vídeo do Youtube</h2>
+            <p>Se o clipe que você precisa estiver no YouTube, você pode simplesmente copiar o código pronto e colá-lo no editor (no modo html).
+            </p>
+                <ol>
+                    <li>Abra o YouTube no seu computador e vá para a página de vídeo que deseja embedar.</li>
+                    <li>Clique no botão Compartilhar abaixo do player.</li>
+                    <li>Selecione Incorporar.</li>
+                    <li>Copie o código.</li>
+                    <li>Cole o código em seu blog ou site.</li>
+                </ol>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/bT8jM2Q7Xm0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                <h2 style="text-align: center">ÁUDIO</h2>
+                <ul>
+                    <li>Para colocar áudio em sites, você pode codificar com o elemento <"audio"> HTML5.</li>
+                    <li>Quando você o codifica com o comando <"audio"> e o atributo de origem (src), o padrão são as configurações padrão de áudio do navegador.</li>
+                    <li>Ou você pode definir alguns elementos de como o áudio será reproduzido, como dizer para reproduzir automaticamente ou reproduzir sem som para que o usuário possa escolher ligar o som.</li>
+                </ul>
+                <p>Aqui estão dois exemplos da W3Schools, com áudio recorrente e mutado:</p>
+                <img src="../img/audio1.PNG">
+                <img src="../img/áudio2.PNG">
+                
+                <p><strong>Rita Lee - Rebeldade</strong></p>
+                <audio controls autoplay>
+                    <source src="../audios/Rita Lee - Rebeldade.m4a" type="audio/ogg">
+                    <source src="../audios/Rita Lee - Rebeldade.m4a" type="audio/mpeg">
+                </audio>
+                
+                <p><strong>MC Rodrigo do CN - Amantes da Foda</strong></p>
+                <audio controls autoplay muted>
+                    <source src="../audios/MC Rodrigo do CN  - Amantes da Foda.mp3" type="audio/ogg">
+                    <source src="../audios/MC Rodrigo do CN  - Amantes da Foda.mp3" type="audio/mpeg">
+                </audio>
+            </body>
+</html>
